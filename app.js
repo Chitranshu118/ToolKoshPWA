@@ -5,9 +5,9 @@ if ("serviceWorker" in navigator) {
 }
 
 
-document.getElementById("closeBtn").addEventListener("click", () => {
-  window.close();
-});
+// document.getElementById("closeBtn").addEventListener("click", () => {
+//   window.close();
+// });
 
 document.querySelectorAll(".tab-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
