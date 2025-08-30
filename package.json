@@ -1,0 +1,25 @@
+{
+  "name": "toolkosh",
+  "version": "1.0.0",
+  "description": "👨‍💻 **Author:** Chitranshu Sharma",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build || echo 'no build step'",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chitranshu118/ToolKoshPWA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chitranshu118/ToolKoshPWA/issues"
+  },
+  "homepage": "https://github.com/Chitranshu118/ToolKoshPWA#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
