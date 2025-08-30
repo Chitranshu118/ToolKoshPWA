@@ -1,123 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <div class="popup-header">
-      <span class="title"
-        >ToolKosh
-        <span style="font-weight: 500; font-size: small"
-          >(An Offline utility toolkit)</span
-        >
-      </span>
-      <button id="closeBtn" class="close-btn">X</button>
-    </div>
-    <!-- <title>Utility Toolbox</title> -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav class="tabs">
-      <button class="tab-btn active" data-tab="pdf" active>Merge PDF</button>
-      <button class="tab-btn" data-tab="jpg">Merge JPG</button>
-      <button class="tab-btn" data-tab="imageToPdf">PDF converter</button>
-      <button class="tab-btn" data-tab="json">JSON Formatter</button>
-    </nav>
-    <main>
-      <section id="pdf" class="tab-content">
-        <h3>Merge PDF</h3>
-        <!-- File input hidden, trigger with label -->
-        <input
-          class="util-input"
-          type="file"
-          id="pdfInput"
-          multiple
-          accept="application/pdf"
-          hidden
-        />
-        <label for="pdfInput" class="util-btn">Select PDF Files</label>
-        <button class="util-btn util-btn-green" id="mergePdfBtn">
-          Merge PDF
-        </button>
-        <button id="clearPdfBtn" class="util-btn util-btn-secondary">
-          Clear
-        </button>
-        <!-- File list -->
-        <div id="pdfFileList" class="file-list"></div>
-      </section>
-      <section id="jpg" class="tab-content hidden">
-        <h3>Merge JPG</h3>
-        <!-- File input -->
-        <input
-          class="util-input"
-          type="file"
-          id="jpgInput"
-          multiple
-          accept="image/jpeg"
-          hidden
-        />
-        <label for="jpgInput" class="util-btn">Select JPEG Files</label>
-        <!-- File actions -->
-        <button class="util-btn" id="mergeJpgBtn">Merge Images</button>
-        <button class="util-btn util-btn-secondary" id="clearJpgBtn">
-          Clear
-        </button>
-        <!-- File list -->
-        <div id="jpgFileList" class="file-list"></div>
-      </section>
-      <section id="json" class="tab-content hidden">
-        <h3>JSON Formatter</h3>
-        <textarea
-          class="util-textarea"
-          id="jsonInput"
-          rows="6"
-          cols="40"
-          placeholder="Paste JSON here"
-        ></textarea>
-        <div style="margin-top: 5px">
-          <button class="util-btn" id="formatJsonBtn">Format JSON</button>
-          <button class="util-btn util-btn-secondary" id="clearJsonBtn">
-            Clear
-          </button>
-          <button
-            class="util-btn util-btn-success"
-            id="copyJsonBtn"
-            style="display: none"
-          >
-            Copy
-          </button>
-        </div>
-        <!-- <pre id="jsonOutput"></pre> -->
-        <pre
-          id="jsonOutput"
-          style="
-            background: #f4f4f4;
-            padding: 10px;
-            border: 1px solid #ccc;
-            white-space: pre-wrap;
-          "
-        >
-Output window</pre
-        >
-      </section>
-      <section id="imageToPdf" class="tab-content hidden">
-        <h3>Image To PDF Converter</h3>
-        <input
-          class="util-input"
-          type="file"
-          id="imageInput"
-          multiple
-          accept="image/*"
-          hidden
-        />
-        <label for="imageInput" class="util-btn">Select Image</label>
-        <button class="util-btn" id="convertImagesBtn">Convert to PDF</button>
-        <button class="util-btn util-btn-secondary" id="clearImagesBtn">
-          Clear
-        </button>
-        <div id="selectedImageName"></div>
-      </section>
-      <div id="messageBlock" style="display: none; font-size: large"></div>
-    </main>
-    <!-- <div class="popup-footer"> <p>© 2025 Chitranshu Sharma | ToolKosh is your offline multipurpose utility toolkit</p> </div> -->
-    <script src="pdf-lib.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToolKosh</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- App Header -->
+  <header class="app-header">
+    <h1 class="app-title">ToolKosh</h1>
+    <span class="app-subtitle">(Offline Utility Toolkit)</span>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <section id="pdf" class="tab-content">
+      <h3>Merge PDF</h3>
+      <input type="file" id="pdfInput" multiple accept="application/pdf" hidden />
+      <label for="pdfInput" class="util-btn">Select PDF Files</label>
+      <button class="util-btn util-btn-success" id="mergePdfBtn">Merge PDF</button>
+      <button id="clearPdfBtn" class="util-btn util-btn-secondary">Clear</button>
+      <div id="pdfFileList" class="file-list"></div>
+    </section>
+
+    <section id="jpg" class="tab-content hidden">
+      <h3>Merge JPG</h3>
+      <input type="file" id="jpgInput" multiple accept="image/jpeg" hidden />
+      <label for="jpgInput" class="util-btn">Select JPEG Files</label>
+      <button class="util-btn" id="mergeJpgBtn">Merge Images</button>
+      <button class="util-btn util-btn-secondary" id="clearJpgBtn">Clear</button>
+      <div id="jpgFileList" class="file-list"></div>
+    </section>
+
+    <section id="imageToPdf" class="tab-content hidden">
+      <h3>Image To PDF Converter</h3>
+      <input type="file" id="imageInput" accept="image/*" hidden />
+      <label for="imageInput" class="util-btn">Select Image</label>
+      <button class="util-btn" id="convertImagesBtn">Convert to PDF</button>
+      <button class="util-btn util-btn-secondary" id="clearImagesBtn">Clear</button>
+      <div id="selectedImageName"></div>
+    </section>
+
+    <section id="json" class="tab-content hidden">
+      <h3>JSON Formatter</h3>
+      <textarea class="util-textarea" id="jsonInput" placeholder="Paste JSON here"></textarea>
+      <div class="btn-row">
+        <button class="util-btn" id="formatJsonBtn">Format JSON</button>
+        <button class="util-btn util-btn-secondary" id="clearJsonBtn">Clear</button>
+        <button class="util-btn util-btn-success" id="copyJsonBtn" style="display:none">Copy</button>
+      </div>
+      <pre id="jsonOutput" class="json-output">Output window</pre>
+    </section>
+
+    <div id="messageBlock" style="display:none;" class="messageBlockContainer"></div>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <button class="tab-btn active" data-tab="pdf">PDF</button>
+    <button class="tab-btn" data-tab="jpg">JPG</button>
+    <button class="tab-btn" data-tab="imageToPdf">Convert</button>
+    <button class="tab-btn" data-tab="json">JSON</button>
+  </nav>
+
+  <script src="pdf-lib.min.js"></script>
+  <script src="app.js"></script>
+</body>
 </html>
