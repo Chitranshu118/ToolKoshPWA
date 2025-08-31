@@ -351,5 +351,5 @@ function displayMessage(text = "", color = "black") {
   messageBlock.style.display = "block";
   messageBlock.style.color = color;
   messageBlock.innerText = text;
-  setTimeout(() => (messageBlock.style.display = "none"), 250000);
+  setTimeout(() => (messageBlock.style.display = "none"), 2500);
 }
