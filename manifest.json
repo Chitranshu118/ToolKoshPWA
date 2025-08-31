@@ -1,12 +1,13 @@
 {
   "name": "ToolKosh",
   "short_name": "ToolKosh",
+  "description": "A simple offline toolkit for PDF merging, image-to-PDF conversion, JPG merging, and JSON formatting",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#2b2b2b",
   "theme_color": "#2b2b2b",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
