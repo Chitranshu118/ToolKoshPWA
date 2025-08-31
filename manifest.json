@@ -1,6 +1,6 @@
 {
   "name": "ToolKosh",
-  "short_name": "ToolKosh",
+  "short_name": "TK",
   "description": "A simple offline toolkit for PDF merging, image-to-PDF conversion, JPG merging, and JSON formatting",
   "start_url": "./index.html",
   "display": "standalone",
