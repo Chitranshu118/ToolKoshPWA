@@ -1,5 +1,6 @@
 /* Reset & Layout */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 90%;
@@ -15,9 +16,9 @@ body {
   min-height: 100vh;
 }
 
-
 /* ========= HEADER ========= */
-header, .popup-header {
+header,
+.popup-header {
   background: #4281ed;
   color: white;
   text-align: center;
@@ -46,7 +47,6 @@ header, .popup-header {
   right: 0;
 }
 
-
 /* ========= TABS AT TOP ========= */
 .tabs {
   display: flex;
@@ -54,6 +54,7 @@ header, .popup-header {
   background: #f1f1f1;
   border-bottom: 1px solid #ddd;
   flex-shrink: 0;
+  height: 8%;
 }
 
 .tab-btn {
@@ -61,18 +62,20 @@ header, .popup-header {
   padding: 12px 0;
   border: none;
   background: transparent;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 50px;
+  font-weight: 600px;
   color: #555;
   cursor: pointer;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .tab-btn.active {
   color: #4281ed;
-  font-weight: 600;
-  border-bottom: 3px solid #4281ed; /* highlight active tab */
+  font-weight: 700;
+  font-size: 50px;
+  box-shadow: rgb(2, 117, 240) 0px 20px 30px -10px;
+  border: 3px solid #4281ed; /* highlight active tab */
 }
-
 
 /* ========= CONTENT ========= */
 .tab-content {
@@ -84,12 +87,13 @@ header, .popup-header {
 }
 
 .tab-content:not(.hidden) {
-   display: grid;
+  display: grid;
   justify-items: center;
 }
 
-.hidden { display: none; }
-
+.hidden {
+  display: none;
+}
 
 /* ========= FOOTER ========= */
 .popup-footer {
@@ -101,30 +105,35 @@ header, .popup-header {
   border-top: 1px solid #ddd;
 }
 
-
 /* ========= BUTTONS ========= */
 .util-btn {
   display: block;
+  align-content: center;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 40%;
+  width: 60%;
   background: #4a90e2;
   color: white;
   border: none;
   padding: 14px;
-  margin: 8px 0;
+  margin: 18px 0;
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 45px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 44px;
+  height: 130px;
 }
 
-.util-btn:hover { background: #357abd; }
-.util-btn:active { background: #2d5f99; }
+.util-btn:hover {
+  background: #357abd;
+}
+.util-btn:active {
+  background: #2d5f99;
+}
 
 .util-btn-secondary {
   background: #f5f5f5;
@@ -132,11 +141,18 @@ header, .popup-header {
   border: 1px solid #ccc;
 }
 
-.util-btn-danger { background: #e74c3c; }
-.util-btn-danger:hover { background: #c0392b; }
-.util-btn-success { background: #27ae60; }
-.util-btn-success:hover { background: #219150; }
-
+.util-btn-danger {
+  background: #e74c3c;
+}
+.util-btn-danger:hover {
+  background: #c0392b;
+}
+.util-btn-success {
+  background: #27ae60;
+}
+.util-btn-success:hover {
+  background: #219150;
+}
 
 /* ========= INPUTS ========= */
 .util-input,
@@ -156,15 +172,14 @@ header, .popup-header {
 .util-select:focus {
   border-color: #4a90e2;
   outline: none;
-  box-shadow: 0 0 4px rgba(74,144,226,0.4);
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.4);
 }
 
 .util-textarea {
-  min-height: 100px;
+  min-height: 150px;
   resize: vertical;
-  width: 70%;
+  width: 90%;
 }
-
 
 /* ========= FILE LIST ========= */
 .file-list {
@@ -193,10 +208,14 @@ header, .popup-header {
   cursor: pointer;
 }
 
+.tab-heading {
+  font-size: xxx-large;
+  font-weight: bold;
+  margin: 10% 0 5%;
+}
 
 /* ========= RESPONSIVE (tablet+) ========= */
 @media (min-width: 768px) {
-
   .file-list {
     flex-direction: row;
   }
