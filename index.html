@@ -11,6 +11,9 @@
       <!-- <button id="closeBtn" class="close-btn">X</button> -->
     </div>
     <!-- <title>Utility Toolbox</title> -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#1976d2" />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -32,10 +35,10 @@
           accept="application/pdf"
           hidden
         />
-        <label for="pdfInput" class="util-btn" style="width: 57%;">Select PDF Files</label>
-        <button class="util-btn" id="mergePdfBtn">
-          Merge PDF
-        </button>
+        <label for="pdfInput" class="util-btn" style="width: 57%"
+          >Select PDF Files</label
+        >
+        <button class="util-btn" id="mergePdfBtn">Merge PDF</button>
         <button id="clearPdfBtn" class="util-btn util-btn-secondary">
           Clear
         </button>
@@ -53,7 +56,9 @@
           accept="image/jpeg"
           hidden
         />
-        <label for="jpgInput" class="util-btn" style="width: 57%;">Select JPEG Files</label>
+        <label for="jpgInput" class="util-btn" style="width: 57%"
+          >Select JPEG Files</label
+        >
         <!-- File actions -->
         <button class="util-btn" id="mergeJpgBtn">Merge Images</button>
         <button class="util-btn util-btn-secondary" id="clearJpgBtn">
@@ -72,17 +77,17 @@
           placeholder="Paste JSON here"
         ></textarea>
         <!-- <div style="margin-top: 5px"> -->
-          <button class="util-btn" id="formatJsonBtn">Format JSON</button>
-          <button class="util-btn util-btn-secondary" id="clearJsonBtn">
-            Clear
-          </button>
-          <button
-            class="util-btn util-btn-success"
-            id="copyJsonBtn"
-            style="display: none"
-          >
-            Copy
-          </button>
+        <button class="util-btn" id="formatJsonBtn">Format JSON</button>
+        <button class="util-btn util-btn-secondary" id="clearJsonBtn">
+          Clear
+        </button>
+        <button
+          class="util-btn util-btn-success"
+          id="copyJsonBtn"
+          style="display: none"
+        >
+          Copy
+        </button>
         <!-- </div> -->
         <!-- <pre id="jsonOutput"></pre> -->
         <pre
@@ -107,7 +112,9 @@ Output window</pre
           accept="image/*"
           hidden
         />
-        <label for="imageInput" class="util-btn" style="width: 57%;">Select Image</label>
+        <label for="imageInput" class="util-btn" style="width: 57%"
+          >Select Image</label
+        >
         <button class="util-btn" id="convertImagesBtn">Convert to PDF</button>
         <button class="util-btn util-btn-secondary" id="clearImagesBtn">
           Clear
