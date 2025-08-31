@@ -17,12 +17,12 @@
     <nav class="tabs">
       <button class="tab-btn active" data-tab="pdf" active>Merge PDF</button>
       <button class="tab-btn" data-tab="jpg">Merge JPG</button>
-      <button class="tab-btn" data-tab="imageToPdf">PDF converter</button>
+      <button class="tab-btn" data-tab="imageToPdf">PDF Converter</button>
       <button class="tab-btn" data-tab="json">JSON Formatter</button>
     </nav>
     <main>
       <section id="pdf" class="tab-content">
-        <h3>Merge PDF</h3>
+        <div class="tab-heading">Merge PDF</div>
         <!-- File input hidden, trigger with label -->
         <input
           class="util-input"
@@ -32,7 +32,7 @@
           accept="application/pdf"
           hidden
         />
-        <label for="pdfInput" class="util-btn">Select PDF Files</label>
+        <label for="pdfInput" class="util-btn" style="width: 57%;">Select PDF Files</label>
         <button class="util-btn" id="mergePdfBtn">
           Merge PDF
         </button>
@@ -43,7 +43,7 @@
         <div id="pdfFileList" class="file-list"></div>
       </section>
       <section id="jpg" class="tab-content hidden">
-        <h3>Merge JPG</h3>
+        <div class="tab-heading">Merge JPG</div>
         <!-- File input -->
         <input
           class="util-input"
@@ -53,7 +53,7 @@
           accept="image/jpeg"
           hidden
         />
-        <label for="jpgInput" class="util-btn">Select JPEG Files</label>
+        <label for="jpgInput" class="util-btn" style="width: 57%;">Select JPEG Files</label>
         <!-- File actions -->
         <button class="util-btn" id="mergeJpgBtn">Merge Images</button>
         <button class="util-btn util-btn-secondary" id="clearJpgBtn">
@@ -63,7 +63,7 @@
         <div id="jpgFileList" class="file-list"></div>
       </section>
       <section id="json" class="tab-content hidden">
-        <h3>JSON Formatter</h3>
+        <div class="tab-heading">JSON Formatter</div>
         <textarea
           class="util-textarea"
           id="jsonInput"
@@ -98,7 +98,7 @@ Output window</pre
         >
       </section>
       <section id="imageToPdf" class="tab-content hidden">
-        <h3>Image To PDF Converter</h3>
+        <div class="tab-heading">Image To PDF Converter</div>
         <input
           class="util-input"
           type="file"
@@ -107,7 +107,7 @@ Output window</pre
           accept="image/*"
           hidden
         />
-        <label for="imageInput" class="util-btn">Select Image</label>
+        <label for="imageInput" class="util-btn" style="width: 57%;">Select Image</label>
         <button class="util-btn" id="convertImagesBtn">Convert to PDF</button>
         <button class="util-btn util-btn-secondary" id="clearImagesBtn">
           Clear
